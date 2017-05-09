@@ -1,8 +1,8 @@
 require "ptoomey3_private_gem/version"
-require "json"
+require "msgpack"
 
 module Ptoomey3PrivateGem
-  def self.pretty_generate(object)
-  	JSON.pretty_generate(object)
+  def self.pack(object)
+  	MessagePack.pack(object)
   end
 end
